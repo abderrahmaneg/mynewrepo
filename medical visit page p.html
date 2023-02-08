@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/medical visit page.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normaliz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+        <script type="module" src = "javascript/backend.js"></script>
+        <script> window.onload = function() {getappdata()}</script>
+        <script src="javascript/info dis.js" type="module"></script>
+    <title>Medical visit page p</title>
+</head>
+
+<body>
+    <div class="medical">
+
+        <div class="head">
+            <a href="appointments pat.html"> <img src="/images/logo.png" alt=""></a>
+            <div id="menu" onmouseleave= "document.getElementById('menu').style.display = 'none';">
+                <button class="sout" onclick="" style="bottom:50px">change info</button>
+                <button class="sout" onclick="" style="bottom:30px">change password</button>
+                <button class="sout" onclick="Signout()">sign out</button>
+            </div>
+            <div class="compte"onmouseenter= "document.getElementById('menu').style.display = 'block'; event.stopPropagation()">
+                <img src = "images/account.svg">
+               
+            </div>
+        </div>
+
+        <div class="container">
+
+       
+            <h2>Medical Visit Page</h2>
+         <div id = "doc-pat">
+            
+            </div>
+          
+            <div class="video">
+                <div class="first sec">
+
+                    <a href="">
+                        <p onclick ="window.open('https\:www.experte.com/online-meeting?join='+sessionStorage.getItem('Appointement'))">go to video call</p>
+                    </a>
+                    <a href=""><i class="fa-solid fa-video"></i></a>
+
+
+                </div>
+            </div>
+
+           
+            <div class="perscription" id="prescript">
+                <div class="header">
+                    <h5>Doctor precription</h5>
+                </div>
+                <div class = "down">
+                     <span>your doctor didn't write a prescription</span>
+                 </div>
+
+            </div>
+           
+           
+           
+           <!--
+         <div class="exmas">
+
+                <div class="header">
+                    <h5>Exams</h5>
+                    <i class="fa-solid fa-upload"></i>
+                </div>
+                <div class="ex" id="exarea">
+                    <div class="view">
+                        <div class="inex">
+                            <textarea name="" id="exmas" cols="30" rows="10" class="areaclass"></textarea>
+                            <i class="fa-solid fa-circle-plus area" onclick="movearea()" ></i>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+        -->
+        </div>
+
+    </div>
+  
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+   
+</body>
+
+
+
+<script>
+    function makePrescription(P_name,D_name,D_mail,D_phone,data)
+{
+    return {
+  returnJsPDFDocObject: true,
+  fileName: "Your Prescription",
+  orientationLandscape: false,
+  compress: true,
+  logo: {
+       src: "./images/logo.png", // "https://raw.githubusercontent.com/edisonneza/jspdf-invoice-template/demo/images/logo.png
+      width: 26.66, //aspect ratio = width/height
+      height: 26.66,
+      margin: {
+          top: 0, //negative or positive num, from the current position
+          left: 0 //negative or positive num, from the current position
+      }
+  },
+  business: {
+      name: "Prescription",
+      website: "tabibi-6c955.web.app",
+  },
+  contact: {
+      label: "Prescription issued for:",
+      name: P_name,
+      address: "by"+ D_name,
+      phone: D_phone,
+      email: D_mail,
+  },
+  invoice: {
+        label: "Date: ",
+        num: dater(new Date),
+        invDate: "",
+        invGenDate: "",
+        headerBorder: false,
+      tableBodyBorder: false,
+      header: [
+        {
+          title: "", 
+          style: { 
+            width: 10 
+          } 
+        }, 
+        { 
+          title: "Medication",
+          style: {
+            width: 50
+          } 
+        }, 
+        { 
+          title: "Dosage",
+          style: {
+            width: 20
+          } 
+        }, 
+        { title: "By"},
+        { title: "Way", width: 30},
+        { title: "Duration"},
+      ],
+      table: Array.from(Array(data.length), (item, index)=>([
+          index + 1,
+          data[index].Medication+"\n",
+          data[index].Dosage,
+          data[index].By,
+          data[index].Way,
+          data[index].Duration,
+      ])),
+  },
+  footer: {
+      text: "The prescription is created on a computer by Tabibi.",
+  },
+  pageEnable: true,
+  pageLabel: "Page ",
+}; 
+}
+
+function dater(d)
+{
+    var day = (d.getDate()).toString(); if(day.length == 1) day = "0"+day;
+    var Month = (d.getMonth()+1).toString(); if(Month.length == 1) Month = "0"+ Month;
+    return day+"/"+Month+"/"+d.getFullYear();
+}
+
+</script>
+</html>

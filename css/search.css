@@ -1,0 +1,448 @@
+/* global rules */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Nunito Sans");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8FEFF;
+}
+
+.login{
+
+    position: absolute;
+    width: 153.05px;
+    height: 47px;
+    right: 70px;
+    top: 15px;
+    cursor: pointer;  user-select: none;
+
+    background: #1E62A0;
+    border: 0.5px solid #5F938A;
+    box-sizing: border-box;
+    box-shadow: -1px 2px 2px rgba(30, 98, 160, 0.29);
+    border-radius: 71px;
+    letter-spacing: 0em;
+    text-align: center;
+    transition: 0.7s ease;
+
+    font-family: 'Nunito Sans', 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+
+
+color: #FFFFFF;
+
+}
+.login:hover{
+    transform: scale(1.1);
+}
+
+
+#menu{
+    position: fixed;
+    width: 20rem;
+    height: 120px;
+    right: 2rem;
+    top: 10px;
+    background: rgb(163, 197, 230);
+    border-radius: 30px;
+    display: none; 
+    z-index: 2;
+}
+
+.sout
+{
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;  user-select: none;
+    color: var(--button-color);
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    position:absolute;
+    bottom: 10px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    font: "Nunito Sans", "sans serif";
+    margin-top: 7rem;
+}
+
+.container b
+{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+    color: gray;
+}
+
+:root {
+
+    --color-nav: rgba(61, 116, 108, 1);
+    --color-nav: #4fa79e;
+    --color-primery: rgba(194, 217, 238, 0.23);
+    --button-color: rgba(30, 98, 160, 1);
+}
+
+
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    /* Large */
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+}
+
+.search {
+    padding-bottom: 30px;
+}
+
+.search .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-color: rgba(194, 217, 238, 1);
+    position: fixed;
+    top:0;
+    width: 100%;
+    margin-bottom: 60px;
+    z-index: 5;
+}
+
+.search .head a img {
+   height: 100%;
+}
+
+.search .navigation .nav_menu li a:hover {
+    color: var(--color-nav);
+}
+
+.search .head a {
+    margin-left: 2rem;
+    height: 100%;
+    padding: 5px;
+}
+
+.search .head .compte {
+    margin-right: 1rem;  
+    z-index: 5;
+    width:fit-content;
+}
+
+.compte span
+{
+    display: inline-block;
+    font-size: larger;
+    padding: 15px;
+    font-family: 'Roboto', "sans serif";
+}
+
+.search .head .compte img {
+    margin-right: 20px;
+    font-size: 30px;
+    color: gray;
+    float: right;
+}
+
+
+
+.compte img 
+{
+border-radius: 200px;
+height: 50px;
+max-width: 50px;
+}
+
+
+
+
+.search h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+
+.search .container .doctor .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.search .container .doctor .info .name,
+.search .container .doctor .info .mail {
+    line-height: 2;
+    display: block;
+    width: 20%;
+}
+
+.btn{
+    width: 20%; text-align: center;
+}
+
+.btn span
+{
+    display:block; 
+    margin-top:20px;
+    color: green;
+    cursor: pointer;  user-select: none;
+}
+
+.search .container .doctor .info .btn button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer; user-select: none;
+}
+.info img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.se {
+    position:absolute;
+    left:50%;
+    margin-left: -200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px 5px;
+}
+
+.search .head input[type="search"] {
+    border: none;
+    outline-width: 0;
+    width: 100%;
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 25%);
+}
+::-webkit-scrollbar-thumb{
+ border-radius: 5px;
+ background: rgba(21, 51, 80, 1);
+
+}
+::-webkit-scrollbar-thumb:hover{
+ background: rgb(29, 63, 95);
+
+}
+
+.perso .info .first i {
+    color: black;
+}
+
+#inf-cnt
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    left:50%;
+    margin-left: -50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #00000031;
+    z-index: 10;
+}
+
+
+
+.perso {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 20px 20px 2px 2px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.perso .photo {
+    background-color: rgba(194, 217, 238, 1);
+    background-size: contain;
+    width: 25%;
+    position: relative;
+
+}
+
+.photo img {
+    display: block;
+    width:  73%;
+    border-radius: 200px;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.perso .info {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.info .first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 1px;
+    border-color: grey transparent gray transparent;
+    border-style: solid;
+    padding: 25px;
+}
+
+.first p
+{
+ width: 150px;
+}
+
+.data
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#info-name{
+    font-family: "Roboto";
+    display: block;
+    width:  100%; 
+    border-radius: 200px;
+    position: absolute;
+    top: 250px;
+    text-align: center;
+    top: 65%;
+    font-size: 30px;
+}
+
+
+
+#ms-container
+{
+    background-color: rgba(0, 0, 0, 0.03);
+    height: 100%;
+    width: 100%;
+    position: fixed; top:0;left: 0;
+    z-index: 10;
+}
+
+
+#mes-box
+{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    background: rgba(194, 217, 238, 1);
+    width: 35rem;
+    height: 100px;
+    left: 50%;
+    margin-left: -17.5rem;
+    top:50%;
+    margin-top: -25px;
+    text-align: center;
+    justify-content: space-around;
+    border-radius: 50px;   
+    animation-name: popin;
+    animation-duration: 0.5s; 
+    user-select: none;
+}
+
+@keyframes popin {
+    0% {top:70%;}
+    100% {top:50%;}
+}
+
+@keyframes popinout {
+    0% {top:60%;}
+    25%{top:50%;}
+    75%{top:50%}
+    100% {top:60%;}
+}
+
+
+#mes-box input
+{
+    margin-left: 12.5%;
+    width: 75%;
+    border: none;
+    border-radius: 5px;
+}
+
+#mes-box button
+{
+width: 30%;
+display: inline-block;
+background-color: var(--button-color);
+color: white;
+border: none;
+border-radius: 5px;
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <link rel = "stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normaliz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style-clandar.css">    
+    <script type="module" src = "javascript/backend.js"></script>
+    <title>calendar d</title>
+</head>
+
+<body>
+    <div class="personalinfo">
+        <div class="head">
+            <a href=""> <img src="/images/logo.png" alt=""></a>
+            <div id="menu" onmouseleave= "document.getElementById('menu').style.display = 'none'">
+                <button class="sout" onclick="window.location = 'personal information doctor.html'" style="bottom:50px">change info</button>
+                <button class="sout" onclick="" style="bottom:30px">change password</button>
+                <button class="sout" onclick="Signout()">sign out</button>
+            </div>
+            <div class="compte"onmouseenter= "document.getElementById('menu').style.display = 'block'">
+                <img src = "images/account.svg" >
+               
+            </div>
+        </div>
+        <div class="container">
+            <div class="navigation">
+                <ul class="nav_menu">
+                    <li><a href="personal information doctor.html"> doctor info</a></li>
+                    <li><a href="appointments doc.html"> appointements</a></li>
+                    <li><a href="archive.html" > archive</a></li>
+                    <li><a href="" class="active"> calendar</a></li>
+                </ul>
+            </div>
+            <h2> Calendar &nbsp; </h2><img class="loading"> 
+            <div id = "cc"> 
+                <span style="opacity: 50%;" onmouseenter="document.getElementById('key-container').style.display = 'inline-flex'" 
+                 onmouseleave="document.getElementById('key-container').style.display = 'none'">(color code)</span>
+                <div id = "key-container"> 
+                <div class = "key" style="background-color: white;">Available for appointements</div>
+                <div class = "key" style="background-color:  rgb(202, 202, 202);">Unavailable for appointements</div>
+                <div class = "key" style="background-color: green; color: white;">your appointements </div>
+                </div>
+            </div> 
+            <i class="fa-solid fa-angle-right arr right" onclick="scrollc(1,1)"></i> <i class="fa-solid fa-angle-left arr left" onclick="scrollc(-1,7)"></i>
+
+            <h3 onclick="showschedule()"><i class="fa-solid fa-calendar"></i> change weekly scedule</h3>
+           
+            <table>
+                <tr>
+                    <th class="day"></th>
+                    <th class="day">Sun </th>
+                    <th class="day">Mon </th>
+                    <th class="day">The </th>
+                    <th class="day">Wed </th>
+                    <th class="day">Thu </th>
+                    <th class="day">Fri </th>
+                    <th class="day">Sat </th>
+                </tr>
+                  
+                
+    
+                <tr>
+                    <td class="time" rowspan="3">9:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td class="time" rowspan="3">10:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td class="time" rowspan="3">11:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td class="time" rowspan="3">12:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+               
+                <tr>
+                    <td class="time" rowspan="3">13:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td class="time" rowspan="3">14:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td class="time" rowspan="3">15:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td class="time" rowspan="3">16:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td class="time" rowspan="3">17:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+    
+                </tr>
+    
+              
+                        <div id="event-container">
+               
+                         </div>
+    
+    
+            </table>    
+  
+        </div>
+    </div>
+
+
+</body><script src="javascript/messages.js"></script>
+<script type= "module" src="javascript/calandar d.js" ></script>
+<script type= "module" src="javascript/clear garbage.js" ></script>
+</html>
+
+

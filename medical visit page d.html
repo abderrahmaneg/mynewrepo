@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/medical visit page.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normaliz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+        <script type="module" src = "javascript/backend.js"></script>
+        <script> window.onload = function() {getappdata()}</script>
+        <script src="javascript/info dis.js" type="module"></script>
+    <title>Medical visit page d</title>
+</head>
+
+<body>
+    <div class="medical">
+
+        <div class="head">
+            <a href="appointments doc.html"> <img src="/images/logo.png" alt=""></a>
+            <div id="menu" onmouseleave= "document.getElementById('menu').style.display = 'none';">
+                <button class="sout" onclick="" style="bottom:50px">change info</button>
+                <button class="sout" onclick="" style="bottom:30px">change password</button>
+                <button class="sout" onclick="Signout()">sign out</button>
+            </div>
+            <div class="compte"onmouseenter= "document.getElementById('menu').style.display = 'block'; event.stopPropagation()">
+                <img src = "images/account.svg">
+               
+            </div>
+        </div>
+
+        <div class="container">
+
+       
+            <h2>Medical Visit Page</h2>
+         <div id = "doc-pat">
+            
+            </div>
+          
+            <div class="video">
+                <div class="first sec">
+
+                    <a href="">
+                        <p onclick ="window.open('https\:www.experte.com/online-meeting?join='+sessionStorage.getItem('Appointement'))">go to video call</p>
+                    </a>
+                    <a href=""><i class="fa-solid fa-video"></i></a>
+
+
+                </div>
+            </div>
+
+           
+            <div class="perscription" id="prescript">
+                <div class="header">
+                    <h5>Doctor precription</h5>
+                    <i class="fa-solid fa-upload" onclick="generatepre()"></i>
+                </div>
+                <table>
+                   <tr style="height: fit-content;">
+                    <th >Medication</th>
+                    <th>Dosage</th>
+                    <th>By</th>
+                    <th>Way</th>
+                    <th>Duration</th>
+                    <th></th>
+                    </tr>
+                    <tr style="height: 80px; vertical-align: middle;" id="med-sel">
+                    <td><div class="second">
+
+                        <label for="produit"></label>
+                        <select class="col">
+                            <option value="paractamol" selected>paracitamol</option>
+                            <option value="paractamol 2" selected>paractamol 2</option>
+                            <option value="paractamol 3"selected>paractamol 3</option>
+                            <option value="paractamol 4"selected>paractamol 4</option>
+                            <option value="paractamol 5"selected>paractamol 5</option>
+                        </select>
+                    </div></td>
+                    <td><select class="col">
+                        <option value="0.25" aria-placeholder="dosage">0.25</option>
+                        <option value="0.5" selected>0.50 </option>
+                        <option value="0.75"selected>0.75 </option>
+                        <option value="1"selected>1 </option>
+                        <option value="2"selected>2 </option>
+                        <option value="3" selected>3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5" selected>5</option>
+                        <option value="6" selected>6</option>
+                        <option value="7" selected>7</option>
+                        <option value="8"selected>8</option>
+                        <option value="9"selected>9</option>
+                        <option value="10" selected>10</option>
+                    </select></td>
+                    <td><div class="second" >
+                        <select class="col">
+                            <option value="day" selected>day</option>
+                            <option value="week" selected>week</option>
+                            <option value="month" selected>month</option>
+
+                        </select>
+                    </div></td>
+                    <td><div class="second">
+
+                        <select class="col">
+                            <option value="oral" selected>oral</option>
+                            <option value="nasal" selected>nasal </option>
+                            <option value=" subcutaneous" selected>subcutaneous </option>
+                            <option value="intravenous" selected>intravenous </option>
+                            <option value="auricular " selected>auricular</option>
+                            <option value="ocular " selected>ocular</option>
+                            <option value="rectal " selected>rectal</option>
+                        </select>
+                    </div></td>
+                    <td><div class="second">
+
+                        <input class = "col" type="text" placeholder="duration" value="1 week">
+                    </div></td>
+                    <td style="width: 10%;"><i onclick="addInfo()" class="fa-solid fa-circle-plus add" > 
+                        </i> <i  onclick="remInfo()" class="fa-solid fa-minus-circle add" ></td>
+                   </tr>
+                </table>
+
+
+            </div>
+           
+           
+           
+           
+            <div class="exmas">
+
+                <div class="header">
+                    <h5>Exams</h5>
+                    <i class="fa-solid fa-upload"></i>
+                </div>
+                <div class="ex">
+                        <div class="inex">
+                          <div class="areaclass">  <textarea name="" ></textarea>
+                            <i class="fa-solid fa-circle-plus area" onclick="movearea()" ></i></div>
+                     
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+  
+    <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+   
+</body>
+
+
+
+</html>

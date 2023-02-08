@@ -1,0 +1,22 @@
+@keyframes load {
+    0% {border-color: rgba(128, 128, 128, 0) gray gray gray;}
+    25% {border-color: gray rgba(128, 128, 128, 0) gray gray;}
+    50% {border-color: gray gray rgba(128, 128, 128, 0) gray;}
+    100% {border-color: gray gray gray rgba(128, 128, 128, 0);}
+}
+
+
+
+
+
+.loading
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    border-width: 2px;
+    border-style: solid;
+    animation-name: load;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}

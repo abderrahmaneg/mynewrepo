@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <link rel = "stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normaliz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <script type="module" src = "javascript/backend.js"></script>
+    <script> window.onload = function() {getpatientinfo()}</script>
+    <title>personal information p</title>
+</head>
+
+<body>
+    <div class="personalinfo">
+        <div class="head">
+            <a href=""> <img src="/images/logo.png" alt=""></a>
+            <div id="menu" onmouseleave= "document.getElementById('menu').style.display = 'none';">
+                <button class="sout" onclick="" style="bottom:50px">change info</button>
+                <button class="sout" onclick="" style="bottom:30px">change password</button>
+                <button class="sout" onclick="Signout()">sign out</button>
+            </div>
+            <div class="compte"onmouseenter= "document.getElementById('menu').style.display = 'block'; event.stopPropagation()">
+                <img src = "images/account.svg">
+               
+            </div>
+        </div>
+        <div class="container">
+            <div class="navigation">
+                <ul class="nav_menu">
+                    <li><a href="" class="active"> personal info</a></li>
+                    <li><a href="appointments pat.html"> appointements</a></li>
+                    <li><a href="history.html"> history</a></li>
+                    <li><a href="calender p.html"> calendar</a></li>
+                </ul>
+            </div>
+            <h2> Personal information</h2>
+            <div class="perso">
+                <div class="photo">
+                    <img src="images/account.svg" alt="">
+                    <input type="file" class="fa-solid fa-pen" id="sel_imag" accept="image/*">
+                </div>
+                <div class="info">
+                    <div class="first"> 
+                        <p>first name : </p> 
+                        <p class="data"><img class = "loading"></p>
+                          <i class="fa-solid fa-pen" style="cursor: pointer" onclick ="modify(0)"></i>
+                    </div>
+                    <div class="first">
+                        <p>last name : </p>
+                        <p class="data"><img class = "loading"></p>
+                          <i class="fa-solid fa-pen" style="cursor: pointer" onclick ="modify(1)"></i>
+                    </div>
+                    <div class="first">
+                        <p>E-mail :</p>
+                        <p class="data"><img class = "loading"></p>
+                          <i class="fa-solid fa-pen" style="cursor: pointer" onclick ="modify(2)"></i>
+                    </div>
+                    <div class="first">
+                        <p> phone number : </p>
+                        <p class="data"><img class = "loading"></p>
+                          <i class="fa-solid fa-pen" style="cursor: pointer" onclick ="modify(3)"></i>
+                    </div>
+                    <div style="width: 100%; text-align:center; color :rgb(0, 0, 160); margin-top:20px; cursor: pointer;  user-select: none;"><img src="images/ficher.svg" alt=""/> Medical file</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body><script src="javascript/messages.js"></script>
+</html>
+
+
+

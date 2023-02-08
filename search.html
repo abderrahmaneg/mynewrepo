@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normaliz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <script>window.onload = function() {search().then(()=>checklogged())}</script>    
+    <title>Doctors</title>
+</head>
+
+<body>
+    <div class="search">
+        <div class="head">
+            <a href="javascript:history.go(-1)"> <img src="/images/logo.png" alt=""></a>
+            
+            <div class="se">
+                <input type="search" placeholder="First Name" id="first">
+                <input type="search" placeholder="Last Name" id="last">
+                <input type="search" placeholder="Speciality" id="spec">
+                <i class="fa-solid fa-magnifying-glass"  onclick="search()"></i>
+            </div>
+
+            <div id="menu" onmouseleave= "document.getElementById('menu').style.display = 'none'">
+                <button class="sout" onclick="window.location = 'personal information patient.html'" style="bottom:50px">change info</button>
+                <button class="sout" onclick="" style="bottom:30px">change password</button>
+                <button class="sout" onclick="Signout()">sign out</button>
+            </div>
+            <div class="compte"onmouseenter= "document.getElementById('menu').style.display = 'block'">
+                <img src = "images/account.svg" >
+               
+            </div>
+        </div>
+        
+        <div class="container" > 
+            <h2>Our doctors </h2>
+            <div id="doc-container">
+                <b>please wait <img class="loading"></b>
+            </div>
+
+        </div>
+    </div>
+ 
+    <script src="javascript/backend.js" type="module"></script>    
+    <script src="javascript/info dis.js" type="module"></script>
+</body><script src="javascript/messages.js"></script>
+</html>
